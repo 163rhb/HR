@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.rhb.vhr.mapper.HrMapper">
+    <resultMap id="HrMap" type="org.rhb.vhr.model.Hr">
+        <id property="id" column="id"/>
+        <result property="name" column="name"/>
+        <result property="phone" column="phone"/>
+        <result property="telephone" column="telephone"/>
+        <result property="address" column="address"/>
+        <result property="enabled" column="enabled"/>
+        <result property="username" column="username"/>
+        <result property="password" column="password"/>
+        <result property="userface" column="userface"/>
+        <result property="remark" column="remark"/>
+    </resultMap>
+    <resultMap id="allHrWithRole" type="org.rhb.vhr.model.Hr" extends="HrMap">
+        <collection property="roles" ofType="org.rhb.vhr.model.Role">
+            <id column="rid" property="id"/>
+            <result column="rname" property="name"/>
+            <result column="rnameZh" property="nameZh"/>
+        </collection>
+    </resultMap>
+
+    <update id="updateHr" parameterType="org.rhb.vhr.model.Hr">
+        update hr
+        <set>
+            <if test="name != null">
+                name = #{name},
+            </if>
+            <if test="phone != null">
+                phone = #{phone},
+            </if>
+            <if test="telephone != null">
+                telephone = #{telephone},
+            </if>
+            <if test="address != null">
+                address = #{address},
+            </if>
+            <if test="enabled != null">
+                enabled = #{enabled},
+            </if>
+            <if test="username != null">
+                username = #{username},
+            </if>
+            <if test="password != null">
+                password = #{password},
+            </if>
+            <if test="userface != null">
+                userface = #{userface},
+            </if>
+            <if test="remark != null">
+                remark = #{remark},
+            </if>
+        </set>
+        where id=#{id}
+    </update>
+    <delete id="delHr">
+        delete from hr where id=#{rid}
+    </delete>
+
+    <select id="getHrRolesById" resultType="org.rhb.vhr.model.Role">
+        select r.* from role r,hr_role hrr where hrr.`rid`=r.`id` and hrr.`hrid`=#{id}
+    </select>
+    <select id="loadUserByUsername" resultMap="HrMap">
+        select * from hr where username=#{username}
+    </select>
+    <select id="getAllHrs" resultMap="allHrWithRole">
+        select hr.id, hr.name, hr.phone, hr.telephone, hr.address, hr.enabled, hr.username, hr.userface,
+        hr.remark,r.`id` as rid,r.`name` as rname,r.`nameZh` as rnameZh from hr left join hr_role hrr on
+        hr.`id`=hrr.`hrid` left join role r on hrr.`rid`=r.`id` where hr.`id`!=#{hrid}
+        <if test="key!=null">
+            and hr.name like concat('%',#{key},'%')
+        </if>
+        order by hr.id
+    </select>
+    <select id="getAllRoles" resultType="org.rhb.vhr.model.Role">
+        select * from role
+    </select>
+    <select id="getAllHrsExceptCurrentHr" resultType="org.rhb.vhr.model.Hr">
+        select * from hr where id!=#{id}
+    </select>
+</mapper>

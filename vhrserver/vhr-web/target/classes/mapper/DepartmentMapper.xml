@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.rhb.vhr.mapper.DepartmentMapper">
+    <resultMap id="BaseResultMap" type="org.rhb.vhr.model.Department">
+        <id property="id" column="id"/>
+        <result property="name" column="name"/>
+        <result property="parentId" column="parentId"/>
+        <result property="depPath" column="depPath"/>
+        <result property="enabled" column="enabled"/>
+        <result property="isParent" column="isParent"/>
+    </resultMap>
+    <resultMap id="departmentsWithChild" type="org.rhb.vhr.model.Department" extends="BaseResultMap">
+        <collection property="children" ofType="org.rhb.vhr.model.Department"
+                    select="org.rhb.vhr.mapper.DepartmentMapper.getAllDepartments"
+                    column="id"/>
+    </resultMap>
+    <insert id="addDep">
+        insert into department (id,name,parentId,depPath,enabled,isParent)
+        values (#{id},#{name},#{parentId},#{depPath},#{enabled},#{isParent})
+    </insert>
+    <update id="updatePath">
+        update department
+        <set>
+            depPath=#{depPath}
+        </set>
+        where id=#{id}
+    </update>
+    <update id="updateIsParent">
+        update department
+        <set>
+            isParent=TRUE
+        </set>
+        where id=#{id}
+    </update>
+    <update id="updateIsnParent">
+        update department
+        <set>
+            isParent=FALSE
+        </set>
+        where id=#{pid}
+    </update>
+    <delete id="delDep">
+        delete from department where id=#{id}
+    </delete>
+
+    <select id="getAllDepartments" resultMap="departmentsWithChild">
+        select * from department where parentId=#{pid}
+    </select>
+    <select id="getParentPath" resultType="java.lang.String">
+        select depPath from department where id=#{pid}
+    </select>
+    <select id="getId" resultType="java.lang.Integer">
+        select id from department where name=#{name}
+    </select>
+    <select id="checkIsParentById" resultType="java.lang.Boolean">
+        select isParent from department where id=#{id}
+    </select>
+    <select id="getNewDep" resultType="org.rhb.vhr.model.Department">
+        select * from department where name=#{name}
+    </select>
+    <select id="getParentId" resultType="java.lang.Integer">
+        select parentId from department where id=#{id}
+    </select>
+    <select id="checkSon" resultType="java.lang.Integer">
+        select count(*) from department where parentId=#{pid}
+    </select>
+    <sql id="Base_Column_List">
+        id, name, parentId, depPath, enabled, isParent
+    </sql>
+    <select id="getAllDepartmentsWithOutChildren" resultType="org.rhb.vhr.model.Department">
+        select
+        <include refid="Base_Column_List">
+        </include>
+        from department;
+    </select>
+
+</mapper>

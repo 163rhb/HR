@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2341de22-0faa-4958-85d0-d69011beb8d5" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="mapper" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="userSettingsFile" value="D:\maven\apache-maven-3.6.2-bin\apache-maven-3.6.2\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+        <option name="jdkForImporter" value="1.8" />
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1YTT32TOSwlofe8BWmSUjFKQ3lB" />
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/vhrserver/vhr-web/src/main/resources/static" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="File.Encoding" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\22746\Desktop\vhr\vhrserver\vhr-web\src\main\resources\static" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.Vhr1BackApplication">
+    <configuration name="MailserverApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="mailserver" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.rhb.mailserver.MailserverApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Vhr1BackApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="vhr-web" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.rhb.vhr.Vhr1BackApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2341de22-0faa-4958-85d0-d69011beb8d5" name="Default Changelist" comment="" />
+      <created>1582965381846</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1582965381846</updated>
+      <workItem from="1582965387756" duration="29000" />
+      <workItem from="1582965544925" duration="1489000" />
+      <workItem from="1583054954638" duration="12803000" />
+      <workItem from="1583068566273" duration="216000" />
+      <workItem from="1583069419249" duration="753000" />
+      <workItem from="1583070183972" duration="65000" />
+      <workItem from="1583082684762" duration="3553000" />
+      <workItem from="1583111450429" duration="217000" />
+      <workItem from="1583112635254" duration="597000" />
+      <workItem from="1583153501804" duration="1414000" />
+      <workItem from="1583215786474" duration="4942000" />
+      <workItem from="1583221993830" duration="5302000" />
+      <workItem from="1583283928359" duration="19272000" />
+      <workItem from="1583368621660" duration="5757000" />
+      <workItem from="1583625917336" duration="1633000" />
+      <workItem from="1583633097931" duration="253000" />
+      <workItem from="1583633799498" duration="945000" />
+      <workItem from="1583636072256" duration="10272000" />
+      <workItem from="1583737310930" duration="2443000" />
+      <workItem from="1583801742479" duration="5241000" />
+      <workItem from="1583822374395" duration="4398000" />
+      <workItem from="1583846640295" duration="2877000" />
+      <workItem from="1583913444291" duration="7409000" />
+      <workItem from="1584025394276" duration="2724000" />
+      <workItem from="1584161569278" duration="1903000" />
+      <workItem from="1584259835025" duration="10816000" />
+      <workItem from="1584350513001" duration="569000" />
+      <workItem from="1584431065925" duration="3359000" />
+      <workItem from="1584434915997" duration="6413000" />
+      <workItem from="1584703074403" duration="4799000" />
+      <workItem from="1584972834743" duration="2987000" />
+      <workItem from="1585024749606" duration="1538000" />
+      <workItem from="1585303281447" duration="1698000" />
+      <workItem from="1585662367482" duration="67000" />
+      <workItem from="1585819265370" duration="1445000" />
+      <workItem from="1585908358691" duration="7152000" />
+      <workItem from="1586009898843" duration="4768000" />
+      <workItem from="1586060858690" duration="7488000" />
+      <workItem from="1586130685968" duration="1723000" />
+      <workItem from="1586138492380" duration="502000" />
+      <workItem from="1586143255442" duration="7337000" />
+      <workItem from="1586485560637" duration="164000" />
+      <workItem from="1586485774122" duration="3703000" />
+      <workItem from="1586676180188" duration="4710000" />
+      <workItem from="1586942002316" duration="1443000" />
+      <workItem from="1587046327451" duration="666000" />
+      <workItem from="1588239249114" duration="3416000" />
+      <workItem from="1588407281765" duration="5000" />
+      <workItem from="1588602685656" duration="625000" />
+      <workItem from="1588638769909" duration="492000" />
+      <workItem from="1588867945262" duration="8000" />
+      <workItem from="1588892768672" duration="1411000" />
+      <workItem from="1588900654707" duration="3005000" />
+      <workItem from="1588910734082" duration="319000" />
+      <workItem from="1588998877426" duration="2902000" />
+      <workItem from="1589065967127" duration="13365000" />
+      <workItem from="1589157618594" duration="5538000" />
+      <workItem from="1589257732045" duration="642000" />
+      <workItem from="1589274356991" duration="540000" />
+      <workItem from="1589613604226" duration="1806000" />
+      <workItem from="1589712026674" duration="745000" />
+      <workItem from="1591179188966" duration="2147000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+</project>
